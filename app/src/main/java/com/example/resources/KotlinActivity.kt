@@ -1,15 +1,11 @@
-package com.example.resources;
+package com.example.resources
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.resources.util.MyLogUtils
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.example.resources.util.FileUtil;
-import com.example.resources.util.MyLogUtils;
-
-public class MainActivity extends AppCompatActivity {
-    private String data = "{\n" +
+class KotlinActivity : AppCompatActivity() {
+    private val data = "{\n" +
             "    \"name\": \"BeJson\",\n" +
             "    \"url\": \"http://www.bejson.com\",\n" +
             "    \"page\": 88,\n" +
@@ -32,16 +28,12 @@ public class MainActivity extends AppCompatActivity {
             "            \"name\": \"SoSo\",\n" +
             "            \"url\": \"http://www.SoSo.com\"\n" +
             "        }\n" +
-            "   ";
+            "    ]\n" +
+            "}"
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        findViewById(R.id.kotlin).setOnClickListener((v) -> {
-            startActivity(new Intent(MainActivity.this, KotlinActivity.class));
-        });
-        MyLogUtils.json("MyLogUtils",data);
-        FileUtil.print();
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_kotlin)
+        MyLogUtils.json("MyLogUtils",data)
     }
 }

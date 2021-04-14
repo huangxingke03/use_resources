@@ -19,8 +19,6 @@ public class MyLogUtils {
     private static final String PARAM = "Param";
     private static final String NULL = "null";
     private static final String TAG_DEFAULT = "LogUtils";
-    private static final String SUFFIX = ".kt";
-    //    private static final String SUFFIX = ".java";
     public static final int JSON_INDENT = 4;
     public static final int V = 0x1;
     public static final int D = 0x2;
@@ -35,6 +33,7 @@ public class MyLogUtils {
     private static boolean mIsGlobalTagEmpty = true;
     private static boolean IS_SHOW_LOG = true;
     private static final int MAX_LENGTH = 4000;
+
 
     public static void init(boolean isShowLog) {
         IS_SHOW_LOG = isShowLog;
@@ -232,7 +231,6 @@ public class MyLogUtils {
                 printJson(tag, msg, headString);
                 break;
         }
-
     }
 
     private static void printDebug(String tagStr, Object... objects) {
@@ -246,27 +244,23 @@ public class MyLogUtils {
     private static String[] wrapperContent(int stackTraceIndex, String tagStr, Object... objects) {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         StackTraceElement targetElement = stackTrace[stackTraceIndex];
-        String className = targetElement.getClassName();
-        String[] classNameInfo = className.split("\\.");
-        if (classNameInfo.length > 0) {
-            className = classNameInfo[classNameInfo.length - 1] + SUFFIX;
-        }
-        if (className.contains("$")) {
-            className = className.split("\\$")[0] + SUFFIX;
-        }
+        String fileName = targetElement.getFileName();
+        //当前方法名
         String methodName = targetElement.getMethodName();
+        //当前位置代码行数
         int lineNumber = targetElement.getLineNumber();
         if (lineNumber < 0) {
             lineNumber = 0;
         }
-        String tag = (tagStr == null ? className : tagStr);
+        //标签处理
+        String tag = (tagStr == null ? fileName : tagStr);
         if (mIsGlobalTagEmpty && TextUtils.isEmpty(tag)) {
             tag = TAG_DEFAULT;
         } else if (!mIsGlobalTagEmpty) {
             tag = mGlobalTag;
         }
         String msg = (objects == null) ? NULL_TIPS : getObjectsString(objects);
-        String headString = "[ (" + className + ":" + lineNumber + ")#" + methodName + " ] ";
+        String headString = "[ (" + fileName + ":" + lineNumber + ")#" + methodName + " ] ";
         return new String[]{tag, msg, headString};
     }
 
@@ -311,10 +305,6 @@ public class MyLogUtils {
             Log.d(tag, "║ " + line);
         }
         printLine(tag, false);
-    }
-
-    public static boolean isLineEmpty(String line) {
-        return TextUtils.isEmpty(line) || line.equals("\n") || line.equals("\t") || TextUtils.isEmpty(line.trim());
     }
 
     public static void printLine(String tag, boolean isTop) {
