@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Resources</string>
+    <string name="download_start_error">"视频加载失败"</string>
+    <string name="sharktime_flow_play_tips">"现在使用非Wi-Fi网络，播放将产生流量"</string>
+    <string name="sharktime_flow_play">"流量观看"</string>
+    <string name="network_error_tips">"没有网络连接，请稍后重试"</string>
+    <string name="error_unsupported_video">"没有可以播放的视频"</string>
+    <string name="error_unsupported_audio">"没有可以播放的音频"</string>
+
 </resources>

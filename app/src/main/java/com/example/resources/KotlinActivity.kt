@@ -2,7 +2,6 @@ package com.example.resources
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.resources.util.MyLogUtils
 
 class KotlinActivity : AppCompatActivity() {
     private val data = "{\n" +
@@ -34,6 +33,5 @@ class KotlinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
-        MyLogUtils.json("MyLogUtils",data)
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:viewportWidth="24"
+    android:viewportHeight="24" android:width="24dp" android:height="24dp">
+    <group android:name="Group-70" android:translateY="2" android:translateX="2">
+        <path android:fillColor="#FFFFFF" android:strokeWidth="1" android:name="Combined-Shape"
+            android:fillType="evenOdd" android:strokeColor="#00000000"
+            android:pathData="M19.1162381,5.88376189 L17.9675962,7.03240383 C16.7636648,3.80134737 13.6505866,1.5 10,1.5 C5.30557963,1.5 1.5,5.30557963 1.5,10 C1.5,14.6944204 5.30557963,18.5 10,18.5 C14.3561068,18.5 17.9468689,15.2231701 18.4417969,11 L19.9506248,11 C19.4489003,16.0533227 15.1853481,20 10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,-2.30926389e-14 10,-2.30926389e-14 C14.0555013,-2.30926389e-14 17.5471469,2.41415348 19.1162381,5.88376189 Z" />
+        <path android:fillColor="#FFFFFF" android:strokeWidth="1" android:name="Combined-Shape"
+            android:fillType="evenOdd" android:strokeColor="#00000000"
+            android:pathData="M18.5,6.5 L18.5,2 C19.3284271,2 20,2.67157288 20,3.5 L20,7.6 C20,7.8209139 19.8209139,8 19.6,8 L15.5,8 C14.6715729,8 14,7.32842712 14,6.5 L18.5,6.5 Z" />
+    </group>
+</vector>

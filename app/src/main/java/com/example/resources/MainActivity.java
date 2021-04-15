@@ -1,12 +1,8 @@
 package com.example.resources;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.example.resources.util.FileUtil;
-import com.example.resources.util.MyLogUtils;
 
 public class MainActivity extends AppCompatActivity {
     private String data = "{\n" +
@@ -41,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.kotlin).setOnClickListener((v) -> {
             startActivity(new Intent(MainActivity.this, KotlinActivity.class));
         });
-        MyLogUtils.json("MyLogUtils",data);
-        FileUtil.print();
+//        FileUtil.print();
     }
 }

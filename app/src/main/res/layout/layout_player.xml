@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:show_timeout="2000"
+        app:player_layout_id="@layout/layout_simple_player_view"
+        app:show_buffering="true">
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+    <LinearLayout
+        android:id="@+id/flow_tip_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="zs-noto-regular"
+            android:text="@string/sharktime_flow_play_tips"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13.81dp" />
+
+        <TextView
+            android:id="@+id/flow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_flow_btn_normal"
+            android:fontFamily="zs-noto-medium"
+            android:gravity="center"
+            android:minWidth="110dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/sharktime_flow_play"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>
