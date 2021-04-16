@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Resources">
-        <activity android:name=".KotlinActivity"></activity>
+        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".TextActivity" />
+        <activity android:name=".KotlinActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

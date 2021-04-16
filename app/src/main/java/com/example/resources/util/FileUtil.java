@@ -28,10 +28,6 @@ public class FileUtil {
             "}";
 
     public static void print() {
-//        MyLogUtils.d("MyLogUtils","-----MyLogUtils----");
-//        MyLogUtils.json("MyLogUtils",data);
-        MyLogUtilsKotlin.d("MyLogUtils","-----MyLogUtils----");
-//        MyLogUtilsKotlin.json("MyLogUtils",data);
 
     }
 }
